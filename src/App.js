@@ -1,10 +1,13 @@
 import "./styles.css";
+import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
+import Home from "./pages/home";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} exact />
+      </Routes>
+    </BrowserRouter>
   );
 }
