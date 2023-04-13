@@ -68,6 +68,9 @@
   padding-right: 0px;
   height: 55px;
 }
+.nav-bottom-item:hover {
+  color: #000;
+}
 .nav-bottom-item a {
   text-decoration: none;
   color: #333;
@@ -82,4 +85,3 @@
   flex: 0 0 auto;
   width: 20%;
 }
-

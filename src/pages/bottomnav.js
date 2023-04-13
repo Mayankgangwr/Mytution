@@ -16,22 +16,22 @@ const BottomNav = () => {
       <div className="container-fluid d-mobile bg-light-grey px-0 m-pading fixed-bottom">
         <div className="row">
           <div className="col-20 nav-bottom-item">
-            <Link to="/home" className="btn p-1">
+            <Link to="/" className="btn p-1">
               <i class="fas fa-house"></i>
             </Link>
           </div>
           <div className="col-20 nav-bottom-item">
-            <Link to="/home" className="btn p-1">
+            <Link to="/" className="btn p-1">
               <i class="fas fa-house"></i>
             </Link>
           </div>
           <div className="col-20 nav-bottom-item">
-            <Link to="/home" className="btn p-1">
+            <Link to="/" className="btn p-1">
               <i class="fas fa-house"></i>
             </Link>
           </div>
           <div className="col-20 nav-bottom-item">
-            <Link to="/home" className="btn p-1">
+            <Link to="/" className="btn p-1">
               <i class="fas fa-house"></i>
             </Link>
           </div>
