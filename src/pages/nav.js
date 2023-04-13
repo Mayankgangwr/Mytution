@@ -10,24 +10,13 @@ const Nav = () => {
     "upcoming",
     "popular",
   ];
-  const navigate = useNavigate();
-  const [searchdata, setSearchdata] = useState("");
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setSearchdata(e.target.value);
-  };
-  const Search = (e) => {
-    e.preventDefault();
-    window.location.href = `/search/${searchdata}`;
-    //navigate(`/search/${searchdata}`);
-  };
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-light-green px-0 m-pading">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-light-green px-0 m-pading fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand mt-2 mt-lg-0 d-mobile logo-6" href="/">
             <h6>
-              <span>HdFilm</span>4U
+              My<span>Tution</span>
             </h6>
           </a>
           <div className="ms-auto mt-1 d-mobile">

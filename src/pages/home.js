@@ -1,10 +1,11 @@
 import React from "react";
 import Nav from "./nav";
+import BottomNav from "./bottomnav";
 const Home = () => {
   return (
     <>
       <Nav />
-      <h1>Hello</h1>
+      <BottomNav />
     </>
   );
 };
