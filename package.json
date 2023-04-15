@@ -8,8 +8,14 @@
   ],
   "main": "src/index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "6",
+    "@fortawesome/free-solid-svg-icons": "6",
+    "@fortawesome/react-fontawesome": "0",
+    "bootstrap": "5",
     "loader-utils": "3.2.1",
     "react": "18.2.0",
+    "react-bootstrap": "2",
+    "react-bs-datatable": "3",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1"

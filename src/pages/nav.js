@@ -2,23 +2,16 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./nav.css";
 const Nav = () => {
-  const links = [
-    "bollywood",
-    "hollywood",
-    "south",
-    "dubbed",
-    "upcoming",
-    "popular",
-  ];
+  const links = ["batches", "students", "accounts", "dues"];
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-light-green px-0 m-pading fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand mt-2 mt-lg-0 d-mobile logo-6" href="/">
+          <Link className="navbar-brand mt-2 mt-lg-0 d-mobile logo-6" href="/">
             <h6>
               My<span>Tution</span>
             </h6>
-          </a>
+          </Link>
           <div className="ms-auto mt-1 d-mobile">
             <a className="text-reset fw-300 me-2" href="#">
               Login
@@ -38,7 +31,7 @@ const Nav = () => {
                 <li className="nav-item">
                   <a
                     className="nav-link text-capitalize fw-300 text-white"
-                    href={`/list/${el}`}
+                    href={`/${el}`}
                   >
                     {el}
                   </a>
@@ -60,4 +53,3 @@ const Nav = () => {
   );
 };
 export default Nav;
-
