@@ -9,7 +9,7 @@ const Home = () => {
       <div className="container-fluid main">
         <div className="row block">
           <h4 className="text-center fs-1 my-2 text-dark">BATCHES</h4>
-          <div className="col-xl-1 col-lg-1 col-md-2 col-sm-3 col-4 col-home">
+          <div className="col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6 col-home">
             <div class="card">
               <div
                 class="card-body text-center"
