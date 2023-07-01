@@ -55,6 +55,6 @@
   }
 }
 
-.table> :not(caption)>*>* {
+.table > :not(caption) > * > * {
   padding: 1rem 0.5rem;
 }
