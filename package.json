@@ -13,12 +13,15 @@
     "@fortawesome/react-fontawesome": "0",
     "bootstrap": "5",
     "loader-utils": "3.2.1",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.6.0",
     "react": "18.2.0",
     "react-bootstrap": "2",
     "react-bs-datatable": "3",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
