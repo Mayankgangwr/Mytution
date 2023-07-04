@@ -3,10 +3,10 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
+import './DataTable.css';
 
 // Additional theme CSS if needed
 import "primereact/resources/themes/saga-blue/theme.css";
-
 import { Paginator } from "primereact/paginator";
 import { InputText } from "primereact/inputtext";
 
@@ -105,9 +105,33 @@ function MyTable() {
         sortOrder={sortOrder}
         onSort={onSort}
       >
-        <Column field="name" header="Name" sortable />
-        <Column field="admitat" header="Admit At" sortable />
-        <Column field="subjects" header="subject" sortable />
+        <Column field="name" header="Name" headerClassName="TableHeader" headerStyle={{
+          display: "flex",
+          justifyContent: "center"
+        }}
+          body={(rowData) =>
+            <div class="d-flex align-items-center">
+              <div class="ms-0">
+                <p class="fw-bold mb-1">Prince Gangwar</p>
+                <p class="text-muted mb-0">
+                  10<sup>th</sup> (₹1500)
+                </p>
+              </div>
+            </div>
+          }
+          sortable />
+        <Column field="admitat" header="Join At" headerClassName="TableHeader" headerStyle={{
+          display: "flex",
+          justifyContent: "center"
+        }}
+          body={(rowData) => <>{rowData.admitat}</>} sortable />
+        <Column field="subjects" header="subject" headerClassName="TableHeader"
+          body={(rowData) => <>{rowData.subject}</>}
+        />
+        <Column field="action" header="Action" headerClassName="TableHeader"
+          body={(rowData) => <>{rowData.name}
+          </>}
+        />
       </DataTable>
     </div>
   );
