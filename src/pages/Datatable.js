@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+
+// Additional theme CSS if needed
+import 'primereact/resources/themes/saga-blue/theme.css';
+
 import { Paginator } from 'primereact/paginator';
 import { InputText } from 'primereact/inputtext';
 
