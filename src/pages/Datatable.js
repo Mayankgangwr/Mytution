@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import './DataTable.css';
+import { Menu } from 'primereact/menu';
 
 // Additional theme CSS if needed
 import "primereact/resources/themes/saga-blue/theme.css";
+
 import { Paginator } from "primereact/paginator";
 import { InputText } from "primereact/inputtext";
 
@@ -76,7 +78,7 @@ function MyTable() {
       subject: "Maths, Science, English",
     },
   ]); // Replace [...] with your actual table data
-
+  const menuRight = useRef(null);
   const [first, setFirst] = useState(0);
   const [rows, setRows] = useState(5);
   const [sortField, setSortField] = useState("");
@@ -90,6 +92,12 @@ function MyTable() {
   const onSort = (event) => {
     setSortField(event.sortField);
     setSortOrder(event.sortOrder);
+  };
+  const handleUpdate = (id) => {
+    alert("Update");
+  };
+  const handledelete = (id) => {
+    alert("Delete");
   };
 
   return (
@@ -105,10 +113,7 @@ function MyTable() {
         sortOrder={sortOrder}
         onSort={onSort}
       >
-        <Column field="name" header="Name" headerClassName="TableHeader" headerStyle={{
-          display: "flex",
-          justifyContent: "center"
-        }}
+        <Column field="name" header="Name" headerClassName="TableHeader"
           body={(rowData) =>
             <div class="d-flex align-items-center">
               <div class="ms-0">
@@ -120,16 +125,28 @@ function MyTable() {
             </div>
           }
           sortable />
-        <Column field="admitat" header="Join At" headerClassName="TableHeader" headerStyle={{
-          display: "flex",
-          justifyContent: "center"
-        }}
+        <Column field="admitat" header="Join At" headerClassName="TableHeader"
           body={(rowData) => <>{rowData.admitat}</>} sortable />
         <Column field="subjects" header="subject" headerClassName="TableHeader"
           body={(rowData) => <>{rowData.subject}</>}
         />
         <Column field="action" header="Action" headerClassName="TableHeader"
-          body={(rowData) => <>{rowData.name}
+          body={(rowData) => <>
+            <Menu
+              style={{ width: "110px" }}
+              model={[
+                {
+                  label: 'Update',
+                  icon: 'pi pi-refresh',
+                  command: () => { handleUpdate(1) }
+                },
+                {
+                  label: 'Delete',
+                  icon: 'pi pi-times',
+                  command: () => { handledelete(1) }
+                }
+              ]} popup ref={menuRight} id="popup_menu_right" popupAlignment="left" />
+            <i className="pi pi-ellipsis-v" style={{ cursor: "pointer" }} onClick={(event) => menuRight.current.toggle(event)} aria-controls="popup_menu_right" aria-haspopup ></i>
           </>}
         />
       </DataTable>
