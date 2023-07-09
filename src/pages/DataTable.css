@@ -2,3 +2,11 @@
     padding: 0.5rem 1rem !important;
     width: 25%;
 }
+
+.p-datatable .p-column-header-content {
+    justify-content: center !important;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+    text-align: center !important;
+}

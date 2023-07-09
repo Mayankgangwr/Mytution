@@ -4,8 +4,11 @@ import BottomNav from "./bottomnav";
 import "./home.css";
 import MyTable from './Datatable';
 import AccTable from './AccountTable';
+import DuesTable from "./DuesTable";
+import { useNavigate } from "react-router-dom";
 const arr = [1, 2, 3, 4, 5];
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Nav />
@@ -216,77 +219,14 @@ const Home = () => {
               boxShadow: "1px 1px 4px #000",
             }}
           >
-            <table class="table align-middle mb-0 bg-white">
-              <thead class="bg-light">
-                <tr>
-                  <th>Name</th>
-                  <th>Due Amount</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <div class="ms-0">
-                        <p class="fw-bold mb-1">Prince Gangwar</p>
-                        <p class="text-muted mb-0">10th Class</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="fw-normal mb-1">1500</p>
-                  </td>
-                  <td>
-                    <button class="btn btn-secondary btn-rounded">
-                      remind
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <div class="ms-0">
-                        <p class="fw-bold mb-1">Mayank Gangwar</p>
-                        <p class="text-muted mb-0">10th Class</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="fw-normal mb-1">1000</p>
-                  </td>
-                  <td>
-                    <button class="btn btn-secondary btn-rounded">
-                      remind
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <div class="ms-0">
-                        <p class="fw-bold mb-1">Prashant Gangwar</p>
-                        <p class="text-muted mb-0">10th Class</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="fw-normal mb-1">500</p>
-                  </td>
-                  <td>
-                    <button class="btn btn-secondary btn-rounded">
-                      remind
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <DuesTable />
           </div>
           <div className="col-12 text-center mt-3">
             <button
               type="button"
               class="btn btn-primary"
               style={{ width: "150px" }}
+              onClick={() => navigate("/dues")}
             >
               All Dues
             </button>

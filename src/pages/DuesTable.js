@@ -10,43 +10,31 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import { Paginator } from "primereact/paginator";
 import { InputText } from "primereact/inputtext";
 
-function AccTable() {
+function DuesTable() {
     const [data, setData] = useState([
         {
             name: "Jane",
             standrad: 10,
-            monthfees: 1500,
-            admitat: "12/04/2023",
-            status: <span
-                class="badge badge-success rounded-pill d-inline py-2 px-3"
-                style={{ fontSize: "14px" }}
-            >
-                Done
-            </span>,
+            dues: 1500,
+            action: <button class="btn btn-secondary btn-rounded">
+                remind
+            </button>,
         },
         {
             name: "Jane",
             standrad: 10,
-            monthfees: 1500,
-            admitat: "12/04/2023",
-            status: <span
-                class="badge badge-primary rounded-pill d-inline py-2 px-3"
-                style={{ fontSize: "14px" }}
-            >
-                Pending
-            </span>,
+            dues: 1500,
+            action: <button class="btn btn-secondary btn-rounded">
+                remind
+            </button>,
         },
         {
             name: "Jane",
             standrad: 10,
-            monthfees: 1500,
-            admitat: "12/04/2023",
-            status: <span
-                class="badge badge-danger rounded-pill d-inline py-2 px-3"
-                style={{ fontSize: "14px" }}
-            >
-                Failed
-            </span>,
+            dues: 1500,
+            action: <button class="btn btn-secondary btn-rounded">
+                remind
+            </button>,
         },
     ]); // Replace [...] with your actual table data
     const menuRight = useRef(null);
@@ -93,28 +81,22 @@ function AccTable() {
                     body={(rowData) => (
                         <div class="d-flex align-items-center justify-content-center">
                             <div class="ms-0">
-                                <p class="fw-bold mb-1">Prince Gangwar</p>
-                                <p class="text-muted mb-0">
-                                    10<sup>th</sup> (₹1500)
-                                </p>
+                                <p class="fw-bold mb-1">Mayank Gangwar</p>
+                                <p class="text-muted mb-0">10th Class</p>
                             </div>
                         </div>
                     )}
                     sortable
                 />
                 <Column
-                    field="monthfees"
-                    header="Fees"
+                    field="dues"
+                    header="Due Amount"
                     headerClassName="TableHeader"
+                    sortable
                 />
                 <Column
-                    field="admitat"
-                    header="Date"
-                    headerClassName="TableHeader"
-                />
-                <Column
-                    field="status"
-                    header="Status"
+                    field="action"
+                    header="Action"
                     headerClassName="TableHeader"
                 />
             </DataTable>
@@ -122,4 +104,4 @@ function AccTable() {
     );
 }
 
-export default AccTable;
+export default DuesTable;

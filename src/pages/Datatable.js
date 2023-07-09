@@ -118,7 +118,7 @@ function MyTable() {
           header="Name"
           headerClassName="TableHeader"
           body={(rowData) => (
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-center">
               <div class="ms-0">
                 <p class="fw-bold mb-1">Prince Gangwar</p>
                 <p class="text-muted mb-0">
