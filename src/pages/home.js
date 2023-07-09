@@ -2,6 +2,8 @@ import React from "react";
 import Nav from "./nav";
 import BottomNav from "./bottomnav";
 import "./home.css";
+import MyTable from './Datatable';
+import AccTable from './AccountTable';
 const arr = [1, 2, 3, 4, 5];
 const Home = () => {
   return (
@@ -45,7 +47,7 @@ const Home = () => {
               boxShadow: "1px 1px 4px #000",
             }}
           >
-            <table class="table align-middle mb-0 bg-white">
+            {/* <table class="table align-middle mb-0 bg-white">
               <thead class="bg-light">
                 <tr>
                   <th>Name</th>
@@ -79,7 +81,8 @@ const Home = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table> */}
+            <MyTable />
           </div>
           <div className="col-12 text-center mt-3">
             <button
@@ -104,7 +107,7 @@ const Home = () => {
               boxShadow: "1px 1px 4px #000",
             }}
           >
-            <table class="table align-middle mb-0 bg-white">
+            {/* <table class="table align-middle mb-0 bg-white">
               <thead class="bg-light">
                 <tr>
                   <th>Name</th>
@@ -187,7 +190,8 @@ const Home = () => {
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table> */}
+            <AccTable />
           </div>
           <div className="col-12 text-center mt-3">
             <button
